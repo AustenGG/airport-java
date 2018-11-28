@@ -9,9 +9,10 @@ public class Airport {
     }
 
     public String returnCapacity() {
-
         return "The airfield capacity is " + this.capacity;
-
     }
 
+    public String instructLand() {
+        return "The plane can land!";
+    }
 }

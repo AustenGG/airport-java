@@ -1,4 +1,3 @@
-# airport-java
 
 Airport Challenge
 =================

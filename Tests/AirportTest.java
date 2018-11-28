@@ -16,4 +16,13 @@ public class AirportTest {
 
     }
 
+    @Test
+    public void instructLand() throws Exception {
+        Airport test2 = new Airport();
+        test2.initialize();
+        String result = test2.instructLand();
+        assertEquals("The plane can land!", result);
+
+    }
+
 }
