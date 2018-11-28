@@ -6,9 +6,9 @@ public class Airport {
     public static void main(String args[]) {
     }
 
-    public void initialize(){
-        this.capacity = 100;
-        this.airfield = new int[100];
+    public void initialize(int airfieldCapacity){
+        this.capacity = airfieldCapacity;
+        this.airfield = new int[airfieldCapacity];
     }
 
     public String returnCapacity() {
@@ -17,27 +17,21 @@ public class Airport {
 
     public String instructLand(){
 
-//        if(Arrays.asList(airfield).contains(0)){
-//            return "The plane may land when clear";
-//        }else{
-//            return "No space";
-//        }
-//
-    String clear = "";
+        String clear = "";
 
-    for(int i=0; i < airfield.length; i++)
-        if(airfield[i] == 0) {
-            clear = "Yes";
-            break;
+        for(int i=0; i < airfield.length; i++)
+            if(airfield[i] == 0) {
+                clear = "Yes";
+                break;
+            }else{
+                clear = "NO";
+                break;
+            }
+        if(clear == "Yes"){
+            return "The plane may land when clear";
         }else{
-            clear = "NO";
-            break;
+            return "The airfield is too full";
         }
-    if(clear == "Yes"){
-        return "The plane may land when clear";
-    }else{
-        return "The airfield is too full";
-    }
     }
 
 
