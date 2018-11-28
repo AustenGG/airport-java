@@ -17,11 +17,19 @@ public class AirportTest {
     }
 
     @Test
-    public void instructLand() throws Exception {
+    public void landConfirmed() throws Exception {
         Airport test2 = new Airport();
         test2.initialize();
-        String result = test2.instructLand();
-        assertEquals("The plane can land!", result);
+        String result = test2.landConfirmed(123);
+        assertEquals("Aircraft on the ground: [123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]", result);
+
+    }
+    @Test
+    public void instructLand() throws Exception{
+        Airport test3 = new Airport();
+        test3.initialize();
+        String result = test3.instructLand();
+        assertEquals("The plane may land when clear", result);
 
     }
 
