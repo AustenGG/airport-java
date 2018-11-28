@@ -47,4 +47,15 @@ public class Airport {
         return "Aircraft on the ground: " + groundedPlanes;
 
     }
+
+    public String takeOff(int aircraftReg){
+        for(int i=0; i < airfield.length; i++)
+            if(airfield[i] == aircraftReg) {
+                airfield[i] = 0;
+                break;
+            }
+        String groundedPlanes =  (Arrays.toString(airfield));
+        return "Aircraft on the ground: " + groundedPlanes;
+
+    }
 }

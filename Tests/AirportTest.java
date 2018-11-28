@@ -19,9 +19,9 @@ public class AirportTest {
     @Test
     public void landConfirmed() throws Exception {
         Airport test2 = new Airport();
-        test2.initialize(100);
+        test2.initialize(10);
         String result = test2.landConfirmed(123);
-        assertEquals("Aircraft on the ground: [123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]", result);
+        assertEquals("Aircraft on the ground: [123, 0, 0, 0, 0, 0, 0, 0, 0, 0]", result);
 
     }
     @Test
@@ -33,4 +33,14 @@ public class AirportTest {
 
     }
 
+    @Test
+    public void takeOff() throws Exception{
+        Airport test4 = new Airport();
+        test4.initialize(10);
+        test4.landConfirmed(123);
+        test4.takeOff(123);
+        String result = test4.takeOff(123);
+        assertEquals("Aircraft on the ground: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]", result);
+
+    }
 }
