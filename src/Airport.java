@@ -58,4 +58,16 @@ public class Airport {
         return "Aircraft on the ground: " + groundedPlanes;
 
     }
+
+
+    public static String validConditions(){
+        double x = Math.random();
+        if(x >= 0.70){
+            return "Stormy";
+        }else{
+            return "Suitable conditions for landing/take off";
+
+        }
+
+    }
 }

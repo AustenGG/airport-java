@@ -43,4 +43,13 @@ public class AirportTest {
         assertEquals("Aircraft on the ground: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]", result);
 
     }
+    @Test
+    public void validConditions() throws Exception{
+        Airport test5 =  new Airport();
+        test5.initialize(10);
+        String result = test5.validConditions();
+//        assertEquals("Stormy", result);
+        assertTrue(result.equals("Stormy") || result.equals("Suitable conditions for landing/take off"));
+
+    }
 }
